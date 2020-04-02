@@ -63,6 +63,6 @@ public class Student extends Person {
 
     }
     public void display(Student st){
-        System.out.printf("%-20s%-10s%-10s%-15s%-10s%-10s%-10s\n",st.getName(),st.getGender(),st.getBirthday(),st.getAddress(),st.getId(),st.getScore(),st.getEmail());
+        System.out.printf("%-10s%-20s%-10s%-15s%-15s%-10s%-10s\n",st.getId(),st.getName(),st.getGender(),st.getBirthday(),st.getAddress(),st.getScore(),st.getEmail());
     }
 }

@@ -48,7 +48,7 @@ public class App {
         Iterator itr;
         Student selectedStudent;
         itr = studentList.iterator();
-        System.out.printf("%-20s%-10s%-10s%-15s%-10s%-10s%-10s\n","Name","Gender","Birthday","Address","ID","Score","Email");
+        Form.displayStudentForm();
         while (itr.hasNext()) {
             selectedStudent =(Student) itr.next();
             selectedStudent.display(selectedStudent);

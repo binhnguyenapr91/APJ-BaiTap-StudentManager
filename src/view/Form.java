@@ -74,6 +74,6 @@ public class Form {
     }
 
     public static void displayStudentForm() {
-        System.out.printf("%-20s%-10s%-10s%-15s%-10s%-10s%-10s\n","Name","Gender","Birthday","Address","ID","Score","Email");
+        System.out.printf("%-10s%-20s%-10s%-15s%-15s%-10s%-10s\n","ID","Name","Gender","Birthday","Address","Score","Email");
     }
 }
