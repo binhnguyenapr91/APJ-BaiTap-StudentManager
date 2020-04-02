@@ -15,10 +15,11 @@ public class App {
         Student selectedStudent;
         Form.scholarshipForm();
         itr = studentList.iterator();
+        Form.displayStudentForm();
         while (itr.hasNext()) {
             selectedStudent = (Student) itr.next();
             if (selectedStudent.getScore() > SCHOLARSHIP_POINT) {
-                Form.displayStudentForm(selectedStudent);
+                selectedStudent.display(selectedStudent);
             }
         }
     }
@@ -28,10 +29,11 @@ public class App {
         Student selectedStudent;
         Form.isFemaleForm();
         itr = studentList.iterator();
+        Form.displayStudentForm();
         while (itr.hasNext()) {
             selectedStudent = (Student) itr.next();
             if (selectedStudent.getGender().equals("female") || selectedStudent.getGender().equals("Female")) {
-                Form.displayStudentForm(selectedStudent);
+                selectedStudent.display(selectedStudent);
             }
         }
     }
@@ -44,18 +46,20 @@ public class App {
 
     private static void displayStudentList(ArrayList studentList) {
         Iterator itr;
+        Student selectedStudent;
         itr = studentList.iterator();
+        System.out.printf("%-20s%-10s%-10s%-15s%-10s%-10s%-10s\n","Name","Gender","Birthday","Address","ID","Score","Email");
         while (itr.hasNext()) {
-            System.out.println(itr.next().toString());
+            selectedStudent =(Student) itr.next();
+            selectedStudent.display(selectedStudent);
         }
     }
 
     private static void deleteStudent(ArrayList studentList) throws IOException {
         String selectedId;
-        Iterator itr;
         Student selectedStudent;
         selectedId = Form.enterIDForm();
-        itr = studentList.iterator();
+        Iterator itr = studentList.iterator();
         while (itr.hasNext()) {
             selectedStudent = (Student) itr.next();
             if (selectedStudent.getId().equals(selectedId)) {
@@ -88,10 +92,11 @@ public class App {
         Student selectedStudent;
         selectedName = Form.enterNameForm();
         itr = studentList.iterator();
+        Form.displayStudentForm();
         while (itr.hasNext()) {
             selectedStudent = (Student) itr.next();
             if (selectedStudent.getName().equals(selectedName)) {
-                Form.displayStudentForm(selectedStudent);
+                selectedStudent.display(selectedStudent);
             }
         }
     }
@@ -102,10 +107,11 @@ public class App {
         Student selectedStudent;
         selectedId = Form.enterIDForm();
         itr = studentList.iterator();
+        Form.displayStudentForm();
         while (itr.hasNext()) {
             selectedStudent = (Student) itr.next();
             if (selectedStudent.getId().equals(selectedId)) {
-                Form.displayStudentForm(selectedStudent);
+                selectedStudent.display(selectedStudent);
             }
         }
     }

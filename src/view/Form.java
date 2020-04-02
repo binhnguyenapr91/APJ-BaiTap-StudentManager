@@ -73,15 +73,7 @@ public class Form {
         return newStudent;
     }
 
-    public static void displayStudentForm(Student student) {
-        System.out.println("=== INFORMATION - STUDENT ===");
-        System.out.println("Name:" + student.getName());
-        System.out.println("Gender:" + student.getGender());
-        System.out.println("Birthday:" + student.getBirthday());
-        System.out.println("Address:" + student.getAddress());
-        System.out.println("ID:" + student.getId());
-        System.out.println("Score:" + student.getScore());
-        System.out.println("Email:" + student.getEmail());
-        System.out.println("=============================");
+    public static void displayStudentForm() {
+        System.out.printf("%-20s%-10s%-10s%-15s%-10s%-10s%-10s\n","Name","Gender","Birthday","Address","ID","Score","Email");
     }
 }
